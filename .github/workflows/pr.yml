@@ -1,9 +1,13 @@
 name: PR Workflow
 
 on:
+  push:
+    branches: [ master ]
   pull_request:
-    branches:
-      - testab
+    branches: [ master ]
+
+  workflow_dispatch:
+
 jobs:
   Build-Deploy:
     runs-on: ubuntu-latest
